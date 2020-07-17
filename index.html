@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--..................................adding cdn for vue js.................................-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Punching Joker</title>
+</head>
+
+<body>
+    <div id="vue-game">
+        <!-- Joker Images -->
+        <div id="joker-img" v-bind:class="{hurt1:healthPercent50B, hurt2:healthPercent50S, bloody:ended}">
+        </div>
+
+        <!-- Joker Health bar -->
+        <div id="health-bar">
+            <div v-bind:style="{ width: health + '%'}">
+            </div>
+        </div>
+
+        <!-- Game buttons -->
+        <div class="buttons">
+            <button @click="batmanPunch" v-show="!ended">Batman Punch</button>
+            <button @click="supermanPunch" v-show="!ended">Superman Punch</button>
+            <button @click="restart" v-show="restartBtn" >Restart</button>
+        </div>
+
+
+
+    </div>
+</body>
+<script src="./js/app.js"></script>
+
+
+</html>

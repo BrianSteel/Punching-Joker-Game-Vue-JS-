@@ -1,0 +1,103 @@
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+  
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/joker_wall.jpg) center no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+
+#joker-img {
+    width: 500px;
+    height: 650px;
+    padding: 2rem;
+    margin: 1rem auto;
+    box-sizing: border-box;
+    background: url("../img/joker.png") center no-repeat;
+    background-size: 40%;
+}
+
+#joker-img.hurt1 {
+    background: url("../img/joker_punched.png") center no-repeat;
+    background-size: 65.8%;
+    position: relative;
+    left: 18px;
+    transition: left 300s;
+}
+
+#joker-img.hurt2 {
+    background: url("../img/jokerpunchedtodeath.png") center no-repeat;
+    background-size: 69%;
+    position: relative;
+    left: 14.3px;
+    bottom: 6px;
+    transition: left, bottom 100ms;
+}
+
+#joker-img.bloody {
+    background: url("../img/joker2.png") center no-repeat;
+    background-size: 45.2%;
+    position: relative;
+    left: 13.2px;
+    animation: animate 2000ms ease-out;
+}
+
+@keyframes animate {
+    0% {
+        background: url("../img/jokerpunchedtodeath.png") center no-repeat;
+        background-size: 69%;
+        position: relative;
+        left: 14.3px;
+        bottom: 6px;
+        transition: left, bottom 300ms;
+    }
+    25% {
+        background: url("../img/jokerpunchedtodeath.png") center no-repeat;
+        background-size: 69%;
+        position: relative;
+        left: 14.3px;
+        bottom: 6px;
+    }
+    40% {
+        background: url("../img/joker2.png") center no-repeat;
+        background-size: 40.2%;
+        position: relative;
+        left: 13.2px;
+    }
+    100% {
+        background: url("../img/joker2.png") center no-repeat;
+        background-size: 45.2%;
+        position: relative;
+        left: 13.2px;
+    }
+}
+
+#health-bar {
+    width: 400px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+#health-bar div {
+    height: 1rem;
+    background: crimson;
+}
+
+.buttons {
+    text-align: center;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+/* binded classes */
